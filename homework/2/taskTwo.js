@@ -196,9 +196,7 @@ function bigNumbersDiv(num1, num2) {
     if (result.length === 0 || isNaN(result))
         return "0";
 
-    if (sign === '-')
-        return -result;
-    return result;
+    return sign+result;
 }
 
 

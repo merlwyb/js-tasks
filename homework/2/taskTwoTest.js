@@ -141,6 +141,16 @@ describe("Деление чисел",
             assert.strictEqual(bigNumbersDiv("10", 0), Infinity);
         });
 
+        it('Отрицательные', function () {
+            assert.strictEqual(bigNumbersDiv("12", -2), '-6');
+            assert.strictEqual(bigNumbersDiv("2", -12), '0');
+            assert.strictEqual(bigNumbersDiv("20", -10), '-2');
+            assert.strictEqual(bigNumbersDiv("-20", -10), "2");
+            assert.strictEqual(bigNumbersDiv("257658468435738495467345674237568674754631231249", -1242512452), "-207368922557677913289311384895133972270");
+            assert.strictEqual(bigNumbersDiv("-500000000000", 10), '-50000000000');
+            assert.strictEqual(bigNumbersDiv("10", 0), Infinity);
+        });
+
         it("Обработка нестандартных вызовов - пустой, null, undefined", function () {
             assert.strictEqual(bigNumbersDiv('', ), '0');
             assert.strictEqual(bigNumbersDiv('', 1), '0');
